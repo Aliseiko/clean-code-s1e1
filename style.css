@@ -82,6 +82,11 @@
   text-transform: uppercase;
 }
 
+.add-item-title {
+  margin-top: 16px;
+  margin-bottom: 20px;
+}
+
 .input[type="text"] {
   margin: 0;
   font-size: 18px;
