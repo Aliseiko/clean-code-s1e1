@@ -12,18 +12,19 @@
   text-align: right;
 }
 
+
+@media (max-width: 768px) {
+  .header {
+    text-align: center;
+  }
+}
+
 .header__img {
   width: 100%;
 }
 
 .header__link {
   font-family: fantasy, cursive;
-}
-
-@media (max-width: 768px) {
-  .header {
-    text-align: center;
-  }
 }
 
 .main {
@@ -47,10 +48,6 @@
   padding: 0;
 }
 
-.list-item {
-  list-style: none;
-}
-
 .input,
 .button {
   outline: none;
@@ -71,8 +68,7 @@
 }
 
 /* Heading */
-.h3,
-.label[for="new-task"] {
+.h3 {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -87,11 +83,12 @@
   margin-bottom: 20px;
 }
 
-.input[type="text"] {
+.input_text {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
   height: 21px;
+  width: 226px;
   padding: 0 9px;
   border: 1px solid #ddd;
   background: #fff;
@@ -100,17 +97,12 @@
   color: #888;
 }
 
-.input[type="text"]:focus {
+.input_text:focus {
   color: #333;
 }
 
 /* New Task */
-.label[for="new-task"] {
-  display: block;
-  margin: 0 0 20px;
-}
-
-.input#new-task {
+#new-task {
   width: 318px;
 }
 
@@ -122,53 +114,50 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  list-style: none;
 }
 
 .list-item > * {
   vertical-align: middle;
 }
 
-.list-item > .input[type="checkbox"] {
+.input_checkbox {
   margin: 0 10px;
 }
 
-.list-item > .label {
+.label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
 
-.list-item > .input[type="text"] {
-  width: 226px;
-}
-
-.button.button_delete .img {
+.img_remove {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-.button.button_delete .img:hover {
+.img_remove:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-.list#completed-tasks .label {
+#completed-tasks .label {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
-.list .list-item .input[type=text] {
+.list-item .input_text {
   display: none;
 }
 
-.list .list-item.editMode .input[type=text] {
+.editMode .input_text {
   display: inline-block;
   width: 224px;
 }
 
-.list .list-item.editMode .label {
+.editMode .label {
   display: none;
 }
